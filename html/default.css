@@ -1,2 +1,5 @@
 
 body{background: blue}
+#container{
+	max-width: 960px;
+}
