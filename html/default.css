@@ -9,3 +9,6 @@ body{background: blue}
 	margin: 0 auto;
 
 }
+.header>h1{/*>는 header의 자식으로 있는 h1을 말하는 거임*/
+
+}
