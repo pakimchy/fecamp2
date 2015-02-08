@@ -19,8 +19,16 @@
 			<a href="#main">메뉴건너뛰기</a>
 			<header class="header">
 				<h1>HTML5</h1>
-				<nav class="gnb">.gnb</nav>
-				<form action="search.html"><!-- action은 생략가능하며, 생략시 자기자신을 말한다.-->
+				<nav class="gnb">
+					<h2>메인 메뉴</h2>
+					<ul>
+						<li><a href="#">메뉴 1</a></li><!--리스트아이탬- ul과 li는 항상 같이 있어야하며, 중간에 다른놈은 절대 못들어옴-->
+						<li><a href="#">메뉴 2</a></li>
+						<li><a href="#">메뉴 3</a></li>
+					</ul><!--언오더드 리스트 비순차 목록(순서가 필요 없는 경우 목록) 적어도 하나의 li테그가 있어야한다.-->
+					<!--<ol></ol> : 오더드 리스트 순차 목록(순서가 있어야 하는 목록)-->
+				</nav>
+				<form class="search" action="search.html"><!-- action은 생략가능하며, 생략시 자기자신을 말한다. class이름을 작성해서 위치를 바꿔주기 위함.-->
 					<input type="text">
 					<input type="checkbox">
 					<input type="radio">
