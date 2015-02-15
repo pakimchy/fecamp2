@@ -4,21 +4,82 @@
 header, footer, section, article, nav, aside, main, figure, figcaption{
 	display: block;
 }
+html,
+body{
+	min-height: 100%;
+	/*html의 부모는 viewport로 viewport전체를 html과 body의 전체로 본다라는 의미*/
+}
+body{
+	margin: 0;
+	/*bady에 들어가 있는 user agence에 들어간 마진 삭제*/
+}
 
 /*All*/
+body{
+		background-image: -webkit-linear-gradient(#ccc,#fff);/*-webkit- 밴더 프리픽스을 적용한 브라우저일 경우 읽어라.*/
+		background-image: -moz-linear-gradient(#ccc,#fff);/*-moz- 밴더 프리픽스을 적용한 브라우저일 경우 읽어라.*/
+		background-image: -ms-linear-gradient(#ccc,#fff);/*-ms- 밴더 프리픽스을 적용한 브라우저일 경우 읽어라.*/
+		background-image: -o-linear-gradient(#ccc,#fff);/*-o- 밴더 프리픽스을 적용한 브라우저일 경우 읽어라.*/
+		background-image: linear-gradient(#ccc,#fff);/*background와 background-image는 같은 말이다. (to bottom,#fff,#000)은 생략가능하고, 아래로 그라디에이션이 이루어진다.는 뜻, 각도인 경우 45deg*/
+}
+.header>h1{
+	font-size: 28px;
+/*	font-weight: normal;  - 굵기 기본으로
+	font-weight: bold;    - 굵기 굵게
+	font-weight: 700;     - 굵기 수치값.(500:기본, 700:굵기*/
+	text-shadow: 1px 5px 2px #fff, -1px -1px 0 #bbb;
+	/*그림자의 우측 아래 뽀샤시 색상*/
+}
+.search{
+	letter-spacing: -4px; 
+}
+.search>*{
+/*.search>input으로 넣어도 됨.브라우저의 기능을 더 향상 시키는 방법*/
+	vertical-align: top;
+	border-radius: 3px;	/*모서리 둥글게... 좌측 상단부터 시계방향으로.. 3px 3px 3px 3px의 준말*/
+}
+.search>input[type="search"]{
+/*.search>[type="search"]로 해도 무관*/
+	border: 1px solid #ccc;
+	height: 32px;
+	width: 160px;/*표준 지침에 버튼 크기가 9cm이상이어야 한다고 한다. 그 크기에 맞으려면 32px이상이어야 함*/
+	box-shadow: 0 0 4px #ccc inset;
+	/*박스 안에만 그림자가 들어가게 하려면 x와 y를 0으로 잡아주고, 뽀샤시를 꼭 0이상 줘야한다.*/
+	/*inset은 박스 안쪽으로 그림자가 나오도록 한다.*/
+	/*margin-right: -5px;*/
+}
 
+.search>[type="submit"]{
+	width: 50px;
+	height: 32px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 4px #aaa;
+}
+/*.header>.search.....이렇게 잡아줘야하지만 간단할 수록 좋음*/
 /*Mobile*/
 
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
-	body{
+	/*body{
 		background: red;
-	}
+	}*/
 /*only all and은 생략이 가능하다. */
 /*only media 커리가 가능한 브라우저만 해라*/
 /*all 대신에 screen, print로도 사용이 가능하다. 이때는 screen인 경우에는 screen에서만 보여라, print인 경우 인쇄할 때만 보이게 해라의 의미*/
 /*and의 경우는 all(screen,print)를 사용하지 않으면, 쓰지 말아야한다.*/
 }
 /*Tablet*/
-
+@media (min-width: 	768px) and (max-width: 1024px){
+	/*	body{
+			background: green;
+		}*/
+}
+/*@media ()는 if()와 같다. () and ()는 두가지 모두 참일 경우 */
 /*Desktop*/
+@media (min-width: 1025px){
+		/*body{
+			background: yellow;
+		}
+*/
+}
