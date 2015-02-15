@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>css test</title>
+	<style>
+	.inline, 
+	.block{
+		width: 100px;
+		height: 100px;
+		margin-bottom: 100px; 
+		margin-left: 100px;
+		display: inline-block; 
+	}	
+	/*선택자 기준으로 줄을 바꾼다.*/
+	/*inline과 block에 모두 적용되는 style*/
+	.inline{
+		/*display: inline;*/
+		background: red;
+		/*inline요소에서는 너비값과 높이값, margin top, bottom이 적용되지 않는다. text라인으로 인식해 너비와 높이가 없는 것으로 간주함*/
+	}
+	.block{
+		/*display: block;*/
+		background: yellow;
+	}
+	/*shfit+ctrl+D :  라인 복사 단축키*/
+	/*shift+ctrl+방향키 : 라인 위치 이동*/
+	</style>
+</head>
+
+<body>
+	<span class="inline">inline</span>
+	<span class="block">block</span>
+</body>
+</html>

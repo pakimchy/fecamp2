@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>css test</title>
+	<style>
+	.inline, 
+	.block,{
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		 /*inlien-block은 하나의 글씨로 인식하여, 사이에 자간(글씨간 간격)이 존재하게 된다. 또한 글씨 크기에 따라 자간의 크기가 달라진다.*/
+	}	
+	/*선택자 기준으로 줄을 바꾼다.*/
+	/*inline과 block에 모두 적용되는 style*/
+	.inline{
+		/*display: inline;*/
+		background: red;
+		/*inline요소에서는 너비값과 높이값, margin top, bottom이 적용되지 않는다. text라인으로 인식해 너비와 높이가 없는 것으로 간주함*/
+	}
+	.block{
+		/*display: block;*/
+		background: yellow;
+	}
+	/*shfit+ctrl+D :  라인 복사 단축키*/
+	/*shift+ctrl+방향키 : 라인 위치 이동*/
+
+	.inline1, 
+	.block1{
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		font-size: 100px;
+	}	
+	.inline1{
+		background: red;
+	}
+	.block1{
+		background: yellow;
+	}
+
+	.inline2, 
+	.block2{
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		font-size: 0;
+	}	
+	.inline2{
+		background: red;
+	}
+	.block2{
+
+		background: yellow;
+	}
+	</style>
+</head>
+
+<body>
+	<span class="inline">inline</span>
+	<span class="block">block</span>
+	<span class="inline1">inline</span>
+	<span class="block1">block</span>
+	<span class="inline2">inline</span>
+	<span class="block2">block</span>
+</body>
+</html>
