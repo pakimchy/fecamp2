@@ -58,6 +58,9 @@ body{
 	box-shadow: 0 0 4px #aaa;
 }
 /*.header>.search.....이렇게 잡아줘야하지만 간단할 수록 좋음*/
+main, .lnb, .aside{
+	margin-bottom: 15px;
+}
 main{
 	/*#main과 main은 선택자 우선순위가 달라진다.*/
 	/*사실 순서대로 우선순위가 잡히지만, id가 element보다 우선 순위 높아서 뒤쪽에 코딩을 했어도 id를 읽어들인다.*/
@@ -74,9 +77,87 @@ main{
 	/*모서리 둥글게 깎기*/
 	min-height: 300px;
 	/*박스내 300px보다 커지면, 함께 커진다. height는 내용이 넘쳐난다.*/
-	
+
+}
+.lnb ul,
+.aside ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/*ul과 ol인 경우에만 list-style을 넣을 수 있다.*/
+}
+.lnb{
+	text-shadow: 1px 1px 0 #333;	
+}
+.lnb h2{
+	background: #666; 
+	background: rgb(0,0,0,.3);
+	border-radius: 4px 4px 0 0;
+	 /*시계 방향으로 좌측 상단부터 깍을 각*/
+	 font-size: 14px;
+	 color: #fff;
+	 padding: 0 10px;
+	 line-height: 32px; 
+	 /*인라인 속성 : 전체 너비가 32px이고, 글씨는 그 중간에 온다.*/
+	 /*user agent에 마진이 들어가 있어서 main과 떨어지는 모습을 보인다.*/
+	 /*32px의 이유는 모바일 단말기에서 표준 최소의 높이와 폭은 32px이다.*/
+	 margin: 0;
+}
+.lnb li{
+	margin: 1px 0;
+}
+.lnb a{
+	display: block;
+	background: #777;
+	padding: 0 10px;
+	height: 32px;
+	line-height: 32px;
+	text-decoration: none;
+	/*글씨에 밑줄이 들어가 있는 걸 지우겠다(none)는 뜻*/
+	color: #fff;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+	/*a에 transition을 넣은 경우는 나갈때도 부드럽게 변하나, hover에 넣으면 들어갈때만 적용되고, 나올때는 적용되지 않는다.*/
+}
+.lnb :last-child>a{
+	/*li의 라스트 차일드를 선택해서 그 안에 a태그*/
+	/*.lnb *:last-child>a 또는 .lnb li:last-child>a 작성 가능*/
+	border-radius: 0 0 4px 4px;
+}
+.lnb a:hover,
+.lnb a:focus{
+	/*hover는 마우스가 올라왔을 때를 의미함*/
+	/*focus는 키보드가 올라갔을 때를 의미함*/
+	/*IE7,IE8에서는 a외의 hover에서는 성능상 문제가 있음*/
+	background: #555;
 }
 
+.aside{
+	border:1px solid #ddd;
+	/*color: red; --> border에 color값을 적용하지 않는 경우, text의 색상값을 넣는 color값의 색상을 가져온다.*/
+	/*부모에 마진이 있을 경우, border나 padding을 넣어주면 부모 자식간의 중첩마진이 사라진다.*/
+	border-radius: 4px;
+	padding: 0 10px;
+	/*width값을 설정하게 되면, 화면크기가 변경될때 padding과 border값이 다르게 보인다.*/
+}
+.aside h2{
+	font-size: 14px;
+	margin: 0;
+	border-bottom: 1px solid #ddd;
+	line-height: 32px;
+}
+/*.aside ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+} --> 상단에 lnb와 aside를 함께 */
+.aside a{
+	display: block;
+	line-height: 32px;
+}
 /*Mobile*/
 
 /*Tablet & Desktop*/
