@@ -153,6 +153,9 @@ main{
 	border-bottom: 1px solid #ddd;
 	line-height: 32px;
 }
+.aside ul{
+	padding: 10px 0;
+}
 /*.aside ul{
 	margin: 0;
 	padding: 0;
