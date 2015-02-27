@@ -165,6 +165,15 @@ main{
 	display: block;
 	line-height: 32px;
 }
+
+.footer{
+	border-top: 1px dotted #ccc;
+}
+.footer>p{
+	text-align: center;
+	color: #666;
+}
+
 /*Mobile*/
 
 /*Tablet & Desktop*/
