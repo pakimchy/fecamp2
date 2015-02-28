@@ -260,7 +260,7 @@ main{
 	/*큰 메뉴에 있는 a만! 선택하는 방법*/
 	background: #444;
 }
-.gnb>ul>li>ul>li{
+.gnb li li{
 	/*작은 메뉴 선택*/
 	/*.gnb li li=.gnb>ul>li>ul>li 같다*/
 	border-top: 1px dotted #444;
@@ -358,12 +358,16 @@ main{
 .gnb>ul>.active>ul{
 	display: block;
 }
+.gnb ul ul{
+	position: absolute;
+}
 .gnb li li{
 	border: 0;
 	display: inline-block;
 }
 .gnb li li>a{
 	color: #666;
+	line-height: 40px;
 }
 /*Tablet*/
 @media (min-width: 	768px) and (max-width: 1024px){
