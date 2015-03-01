@@ -211,11 +211,13 @@ main{
 	/*그런데 자식요소가 없음으로 여기서 만들어준다. content로...*/
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 4px;
+	left: 4px;
 	width: 32px;
 	height: 4px;
-	background: #fff;
+	/*background: #fff;*/
+	border-top: 12px double #fff;
+	border-bottom: 12px double #fff;
 	/*absolute는 부모의 position이 있어야, 부모의 값을 가진다.*/
 }
 /*Tablet & Desktop*/
