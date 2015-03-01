@@ -311,14 +311,16 @@ main{
 	display: block !important;
 	/*!important는 최상위로 우선순위가 올라간다.*/
 	/*모바일 화면에서 폍다가 접으면 inline으로 style이 들어간다. 그래서 메뉴가 안보이게 됨으로 !important로 블록형태로 유지시킴*/
+	background: none;
 }
 .gnb ul ul{
 	display: none;
 }
 /*코드 작성을 용이하게 하기 위해 잠시 접어둔다.*/
 .gnb>ul>li{
-	display: inline-block;
+	/*display: inline-block;*/
 	/*자간 공백이 생김*/
+	float: left;
 }
 /*Tablet*/
 @media (min-width: 	768px) and (max-width: 1024px){
