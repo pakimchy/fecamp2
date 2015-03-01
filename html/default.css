@@ -192,6 +192,13 @@ main{
 	margin: 0;
 	/*없어도 됨*/
 }
+.gnb>button{
+	border: 0;
+	background: #666;
+	width: 40px;
+	height: 36px;
+	padding: 36px 0 0 0 ;
+}
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
 	/*body{
