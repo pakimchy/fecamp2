@@ -225,6 +225,19 @@ main{
 	/*absolute는 부모의 position이 있어야, 부모의 값을 가진다.*/
 	/*전체 넓ㅅ이 widht32 /  border-top 12르 double로 3등분 해서 4,4,4가 됨, height값이 4여서 top과 bottom의 사이 폭이 나온다.*/
 }
+.gnb ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.gnb a{
+	display: block;
+	background: #666;
+	color: #fff;
+	/*메뉴 전체를 색상을 같도록 했음*/
+	line-height: 32px;
+	text-decoration: none;
+}
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
 	/*body{
