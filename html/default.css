@@ -180,7 +180,7 @@ main{
 	margin: 0 10px;
 }
 .skip{
-	display: 0;
+	display: none;
 }
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
