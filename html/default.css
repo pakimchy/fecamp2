@@ -199,6 +199,7 @@ main{
 	border-radius: 4px;
 	overflow: hidden;
 	/*overflow를 주지 않으면, 자식 요소 중 a태그가 삐져나가서 둥글게 보이지 않는다. 그래서 넣음*/
+	display: none;
 }
 .gnb>button{
 	border: 0;
@@ -266,7 +267,11 @@ main{
 .gnb>ul>li>ul>li:first-child{
 	/* =.gnb li li:first-child*/	
 	border: 0;
-}	
+}
+.search{
+	margin: 15px 0;
+	/*검색 버튼 상하로 너무 다닥다닥 붙어 있는 거 수정*/
+}
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
 	/*body{
