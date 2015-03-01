@@ -12,6 +12,8 @@ body{
 body{
 	margin: 0;
 	/*bady에 들어가 있는 user agence에 들어간 마진 삭제*/
+	min-width: 320px;
+	/* 화면이 더줄어들지 않도록 하기 위해 넣어준다. */
 }
 body, table, button, input, textarea, select{
 	font-size: 14px;
