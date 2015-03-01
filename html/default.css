@@ -297,7 +297,22 @@ main{
 /*only media 커리가 가능한 브라우저만 해라*/
 /*all 대신에 screen, print로도 사용이 가능하다. 이때는 screen인 경우에는 screen에서만 보여라, print인 경우 인쇄할 때만 보이게 해라의 의미*/
 /*and의 경우는 all(screen,print)를 사용하지 않으면, 쓰지 말아야한다.*/
+.gnb>button{
+	display: none;
 }
+.search{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	margin: 0;
+	width: 200px;
+}
+.gnb>ul{
+	display: block !important;
+	/*!important는 최상위로 우선순위가 올라간다.*/
+	/*모바일 화면에서 폍다가 접으면 inline으로 style이 들어간다. 그래서 메뉴가 안보이게 됨으로 !important로 블록형태로 유지시킴*/
+}
+
 /*Tablet*/
 @media (min-width: 	768px) and (max-width: 1024px){
 	/*	body{
