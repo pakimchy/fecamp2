@@ -204,9 +204,11 @@ main{
 	overflow: hidden;
 	/*text가 화면 밖에 있어서 안보이긴 하나, 보이는 브라우저도 있으니, 화면에서 숨겨준다.*/
 	border-radius: 4px;
-	position: relative;
+	position: absolute;
 	cursor: pointer;
 	/*마우스 올릴때 손모양으로 바뀜*/
+	top: 15px;
+	right: 10px;
 }
 .gnb>button:before{
 	/*bfore는 button의 첫번째 자식요소를 선택하라!*/
