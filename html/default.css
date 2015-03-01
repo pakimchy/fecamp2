@@ -195,7 +195,7 @@ main{
 .gnb>button{
 	border: 0;
 	background: #666;
-	background: #666 url(xxx.png) no-repeat;
+	/*background: #666 url(xxx.png) no-repeat;*/
 	/*이미지가 색상 위에 무조건 올라온다. no-repeat은 바둑판식 표현을 못하도록*/
 	width: 40px;
 	height: 36px;
@@ -204,6 +204,19 @@ main{
 	overflow: hidden;
 	/*text가 화면 밖에 있어서 안보이긴 하나, 보이는 브라우저도 있으니, 화면에서 숨겨준다.*/
 	border-radius: 4px;
+	position: relative;
+}
+.gnb>button:before{
+	/*bfore는 button의 첫번째 자식요소를 선택하라!*/
+	/*그런데 자식요소가 없음으로 여기서 만들어준다. content로...*/
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 32px;
+	height: 4px;
+	background: #fff;
+	/*absolute는 부모의 position이 있어야, 부모의 값을 가진다.*/
 }
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
