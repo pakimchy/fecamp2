@@ -44,11 +44,13 @@ body{
 	vertical-align: top;
 	border-radius: 3px;	/*모서리 둥글게... 좌측 상단부터 시계방향으로.. 3px 3px 3px 3px의 준말*/
 }
-.search>input[type="search"]{
-/*.search>[type="search"]로 해도 무관*/
+.search>[type="search"]{
+/*.search>input[type="search"]로 해도 무관*/
+/*아래서 오버라이딩하기 위해 변경*/
 	border: 1px solid #ccc;
 	height: 32px;
-	width: 160px;/*표준 지침에 버튼 크기가 9cm이상이어야 한다고 한다. 그 크기에 맞으려면 32px이상이어야 함*/
+	/*표준 지침에 버튼 크기가 9cm이상이어야 한다고 한다. 그 크기에 맞으려면 32px이상이어야 함*/
+	width: 160px;
 	box-shadow: 0 0 4px #ccc inset;
 	box-sizing: border-box;
 	/*박스 안에만 그림자가 들어가게 하려면 x와 y를 0으로 잡아주고, 뽀샤시를 꼭 0이상 줘야한다.*/
@@ -271,6 +273,20 @@ main{
 .search{
 	margin: 15px 0;
 	/*검색 버튼 상하로 너무 다닥다닥 붙어 있는 거 수정*/
+	padding: 0 60px 0 0;
+	position: relative;
+	/*submit버튼에 position을 넣기 위해*/
+}
+.search>[type="search"]{
+	display: block;
+	width: 100%;
+}
+.search>[type="submit"]{
+	width: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*padding 값이 .search에서 60px가 들어가 있으나, absolute는 padding에 영향을 받지 않는다.*/
 }
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
