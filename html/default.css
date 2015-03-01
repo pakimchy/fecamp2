@@ -221,6 +221,7 @@ main{
 	border-top: 12px double #fff;
 	border-bottom: 12px double #fff;
 	/*absolute는 부모의 position이 있어야, 부모의 값을 가진다.*/
+	/*전체 넓ㅅ이 widht32 /  border-top 12르 double로 3등분 해서 4,4,4가 됨, height값이 4여서 top과 bottom의 사이 폭이 나온다.*/
 }
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
