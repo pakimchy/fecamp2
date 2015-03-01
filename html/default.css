@@ -175,7 +175,10 @@ main{
 }
 
 /*Mobile*/
-
+	/*좌우에 마진을 넣어준다. body or container에 넣어준다.*/
+.container{
+	margin: 0 10px;
+}
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
 	/*body{
