@@ -343,6 +343,17 @@ main{
 	padding: 0 25px;
 	/*메뉴 버튼 간 간격 넓이기*/
 }
+.gnb>ul>.active>a{
+	/*ul과 a 사이에는 li뿐이 없음으로 li.active에서 li는 생략할 수 있다.*/
+	background: #fff !important;
+	color: #000;
+	font-weight: 700;
+	/*700=bold*/
+	margin-top: 4px;
+	line-height: 36px;
+	/*마진 4px가 생기면서 아래로 4px text가 내려온다.그래서 line-height로 올려준다.*/
+	border-radius: 4px 4px 0 0;
+}
 /*Tablet*/
 @media (min-width: 	768px) and (max-width: 1024px){
 	/*	body{
