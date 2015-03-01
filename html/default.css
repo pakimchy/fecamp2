@@ -238,6 +238,10 @@ main{
 	line-height: 32px;
 	text-decoration: none;
 }
+.gnb>ul>li>a{
+	/*큰 메뉴에 있는 a만! 선택하는 방법*/
+	background: #444;
+}
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
 	/*body{
