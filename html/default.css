@@ -194,6 +194,9 @@ main{
 }
 .gnb>ul{
 	background: #666;
+	border-radius: 4px;
+	overflow: hidden;
+	/*overflow를 주지 않으면, 자식 요소 중 a태그가 삐져나가서 둥글게 보이지 않는다. 그래서 넣음*/
 }
 .gnb>button{
 	border: 0;
