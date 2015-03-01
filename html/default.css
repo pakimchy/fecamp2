@@ -195,12 +195,15 @@ main{
 .gnb>button{
 	border: 0;
 	background: #666;
+	background: #666 url(xxx.png) no-repeat;
+	/*이미지가 색상 위에 무조건 올라온다. no-repeat은 바둑판식 표현을 못하도록*/
 	width: 40px;
 	height: 36px;
 	padding: 36px 0 0 0 ;
 	/*box-sizing이 border-box여서 padding과 height값이 합쳐지지 않고, 둘 중 넓은 값을 폭으로 가진다.*/
 	overflow: hidden;
 	/*text가 화면 밖에 있어서 안보이긴 하나, 보이는 브라우저도 있으니, 화면에서 숨겨준다.*/
+	border-radius: 4px;
 }
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
