@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-
+<!-- 스크립트의 경우, head에 넣는 것과 bocy에 넣는 것은  파싱을 처음에 해야하는 경우 head,  페이지가 로딩될때는 필요없는 경우, (특정 상황에 발생하는 이벤트에 해당하는 것)밑에 넣어주는 것이 좋다.-->
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
@@ -94,5 +94,9 @@
 				<p>Copyright &copy; FE.CAMP. All rights reserved.</p>
 			</footer><!--한페이지에 여러번 등장 가능-->
 		</div>
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<!-- 메뉴 버튼을 넣으면 스르륵 열리는 동작을 하게 하려면 자바스크립트가 들어가야 하는데, 그래서 넣어줌 -->
+	<script src="default.js"></script>
+	<!-- 두개의 순서가 있음. -->
 	</body>
 </html>
