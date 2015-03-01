@@ -240,6 +240,7 @@ main{
 	/*메뉴 전체를 색상을 같도록 했음*/
 	line-height: 32px;
 	text-decoration: none;
+	padding: 0 10px;
 }
 .gnb>ul>li>a{
 	/*큰 메뉴에 있는 a만! 선택하는 방법*/
@@ -247,9 +248,12 @@ main{
 }
 .gnb>ul>li>ul>li{
 	/*작은 메뉴 선택*/
+	/*.gnb li li=.gnb>ul>li>ul>li 같다*/
 	border-top: 1px dotted #444;
 }
+
 .gnb>ul>li>ul>li:first-child{
+	/* =.gnb li li:first-child*/	
 	border: 0;
 }	
 /*Tablet & Desktop*/
