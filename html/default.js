@@ -1,3 +1,6 @@
 jQuery(function($){
-	alert(1);
+	$(".gnb>button").on("click", function(){
+		alert(1);
+	});	
 });
+// jQuery = $
