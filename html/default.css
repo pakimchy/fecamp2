@@ -246,6 +246,12 @@ main{
 	line-height: 32px;
 	text-decoration: none;
 	padding: 0 10px;
+	white-space: nowrap;
+	/*제목이 길어졌을 경우, 줄바꿈을 하지 않게 하는 기능*/
+	/*.gnb>ul의 overflow 덕에 칸 밖으로 나간 글이 보이지 않는다. 하지만 text-overflow가 작동하지 않는다.*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*inline의 경우 적용되지 않는다.*/
 }
 .gnb>ul>li>a{
 	/*큰 메뉴에 있는 a만! 선택하는 방법*/
