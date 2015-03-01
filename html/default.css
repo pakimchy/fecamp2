@@ -192,6 +192,9 @@ main{
 	margin: 0;
 	/*없어도 됨*/
 }
+.gnb>ul{
+	background: #666;
+}
 .gnb>button{
 	border: 0;
 	background: #666;
@@ -242,6 +245,13 @@ main{
 	/*큰 메뉴에 있는 a만! 선택하는 방법*/
 	background: #444;
 }
+.gnb>ul>li>ul>li{
+	/*작은 메뉴 선택*/
+	border-top: 1px dotted #444;
+}
+.gnb>ul>li>ul>li:first-child{
+	border: 0;
+}	
 /*Tablet & Desktop*/
 @media only all and (min-width:768px){
 	/*body{
