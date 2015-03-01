@@ -317,6 +317,7 @@ main{
 	height: 40px;
 	border-bottom: 40px solid #fff;
 	padding-left: 25px;
+	overflow: visible;
 	background: -webkit-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
 	background: -moz-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
 	background: -ms-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
@@ -353,6 +354,9 @@ main{
 	line-height: 36px;
 	/*마진 4px가 생기면서 아래로 4px text가 내려온다.그래서 line-height로 올려준다.*/
 	border-radius: 4px 4px 0 0;
+}
+.gnb>ul>.active>ul{
+	display: block;
 }
 /*Tablet*/
 @media (min-width: 	768px) and (max-width: 1024px){
