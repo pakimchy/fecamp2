@@ -433,4 +433,14 @@ main{
 			background: yellow;
 		}
 */
+	main{}
+	.lnb{
+		float: left;
+		width: 200px;
+	}
+	.aside{
+		float: right;
+		width: 158px;
+		/*box-sizing이 content box이어서 사이즈를 margin과 padding값을 뺀 값이 들어가야 180px 사이즈로 되기에... 158px로 넣어줌*/
+	}
 }
