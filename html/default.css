@@ -433,6 +433,10 @@ main{
 			background: yellow;
 		}
 */
+	.body{
+		padding: 0 200px 0 220px;
+		/*main에 좌우 공간 만들기.*/
+	}
 	main{}
 	.lnb{
 		float: left;
