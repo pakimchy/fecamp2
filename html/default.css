@@ -437,14 +437,24 @@ main{
 		padding: 0 200px 0 220px;
 		/*main에 좌우 공간 만들기.*/
 	}
-	main{}
+	main{
+		width: 100%;
+		margin-right: -100%;
+		/*main에 플롯값이 없어서 lnb와 aside가 같은 높이가 아니어서 올라오지 않는다. 그래서...*/
+		float: left;
+		/*main을 float으로 변경 시켜준다.*/
+	}
 	.lnb{
 		float: left;
 		width: 200px;
+		position: relative;
+		right: 220px;
 	}
 	.aside{
 		float: right;
 		width: 158px;
 		/*box-sizing이 content box이어서 사이즈를 margin과 padding값을 뺀 값이 들어가야 180px 사이즈로 되기에... 158px로 넣어줌*/
+		position: relative;
+		left: 200px;
 	}
 }
