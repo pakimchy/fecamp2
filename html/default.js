@@ -19,7 +19,8 @@ jQuery(function($){
 
 // TABLET & DESKTOP의 GNB 메뉴
 	$(".gnb>ul>li>a").on("mouseover", function(){
-		alert(1);
+		$(this).parent().addClass("active");
+		//parent(li)라고 써야하지만 this의 부모는 무조건 li이기때문에 생략가능
 	});	
 });
 // jQuery = $
