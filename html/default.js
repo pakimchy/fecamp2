@@ -1,4 +1,5 @@
 jQuery(function($){
+// 모바일 GNB 토글 버튼	
 	var	$gnbBtn = $(".gnb>button");
 	// 반복되는 이름을 만들어준다.
 	// 변수를 선언하지 않으면 지속적으로 찾아봐야하지만, 변수를 선언하면 한번만 찾는다.
@@ -14,6 +15,11 @@ jQuery(function($){
 			$gnbBtn.text("메뉴 열기");
 			alert("열기");
 		}
+	});	
+
+// TABLET & DESKTOP의 GNB 메뉴
+	$(".gnb>ul>li>a").on("mouseover", function(){
+		alert(1);
 	});	
 });
 // jQuery = $

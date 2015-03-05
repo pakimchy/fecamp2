@@ -1,0 +1,9 @@
+facebook에 들어가는 항목들의 태그
+
+> 이미지 : article 태그내에 있는 이미지가 facebook에 노출된다.
+> codepen에 들어가 있는 제목이 이미지 바로 아래 표시된다.(제목)
+> title 태그의 내용이 들어간다.
+> 제목 아래 나오는 문장은 처음 만나는 <p>태그에 내용을 넣어주는데, 이를 원하는데로 하려면
+ html에 
+ <meta name="author" content="이현철">
+ <meta name="dscription" content="facebook에 제목 아래 나오는 내용""
