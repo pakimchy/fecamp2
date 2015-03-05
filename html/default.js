@@ -18,7 +18,7 @@ jQuery(function($){
 	});	
 
 // TABLET & DESKTOP의 GNB 메뉴
-	$(".gnb>ul>li>a").on("mouseover", function(){
+	$(".gnb>ul>li>a").on("mouseover focus", function(){
 		$(this).parent().addClass("active").siblings().removeClass("active");
 		//parent(li)라고 써야하지만 this의 부모는 무조건 li이기때문에 생략가능
 		//siblings 전체를 선택하라는 의미고, 
