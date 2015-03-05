@@ -383,6 +383,15 @@ main{
 	/*	body{
 			background: green;
 		}*/
+.body:after{
+/*main, lnb, aside가 모두 플롯이 되는 경우 height값이 없어집니다. 그래서 body에 높이를 넣어줘야하는데...그방법은 after를 넣어 body가 종료되기 직전에 가상의 element를
+선택하게 하는 방식으로 만든다.*/
+	content: "";
+	/*before나 after의 경우에는 꼭!!! content와 함께한다.*/
+	display: block;
+	clear: both;
+	/*float을 해체한다는 뜻 그렇지만 inline 요소에는 작동하지 않음으로 content는 inline이라서... block으로 변경해줘야 한다.*/
+}
 }
 /*@media ()는 if()와 같다. () and ()는 두가지 모두 참일 경우 */
 /*Desktop*/
