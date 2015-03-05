@@ -396,8 +396,13 @@ main{
 	/*	body{
 			background: green;
 		}*/
+	.body{
+		padding-right: 200px;
+	}
 	main{
 		float: left;
+		width: 100%;
+		/*main의 부모인 body에 우측에 padding을 넣어 main이 한쪽이 차지하지 않게 한다.*/
 	}
 	/*메인 화면 좌측 정렬*/
 	.lnb, 
