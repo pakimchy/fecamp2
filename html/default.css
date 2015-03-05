@@ -309,6 +309,8 @@ main{
 }
 .gnb{
 	margin-bottom: 15px;
+	position: relative;
+	/*중메뉴가 메뉴 바의 앞쪽에 나오도록 하기 위함.*/
 }
 .gnb>ul{
 	display: block !important;
@@ -357,6 +359,8 @@ main{
 }
 .gnb>ul>.active>ul{
 	display: block;
+	left: 0;
+	/*메뉴 바의 맨앞으로 붙임*/
 }
 .gnb ul ul{
 	position: absolute;
