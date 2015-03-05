@@ -378,11 +378,6 @@ main{
 	color: #666;
 	line-height: 40px;
 }
-/*Tablet*/
-@media (min-width: 	768px) and (max-width: 1024px){
-	/*	body{
-			background: green;
-		}*/
 .body:after{
 /*main, lnb, aside가 모두 플롯이 되는 경우 height값이 없어집니다. 그래서 body에 높이를 넣어줘야하는데...그방법은 after를 넣어 body가 종료되기 직전에 가상의 element를
 선택하게 하는 방식으로 만든다.*/
@@ -392,6 +387,13 @@ main{
 	clear: both;
 	/*float을 해체한다는 뜻 그렇지만 inline 요소에는 작동하지 않음으로 content는 inline이라서... block으로 변경해줘야 한다.*/
 }
+/*tablet과 desktop모두에 사용될 것임으로 이곳으로 이동*/
+}
+/*Tablet*/
+@media (min-width: 	768px) and (max-width: 1024px){
+	/*	body{
+			background: green;
+		}*/
 }
 /*@media ()는 if()와 같다. () and ()는 두가지 모두 참일 경우 */
 /*Desktop*/
