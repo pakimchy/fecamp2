@@ -457,4 +457,18 @@ main{
 		position: relative;
 		left: 200px;
 	}
+	.container{
+		max-width: 1280px;
+		margin: 0 auto;
+		/*화면에의 중앙에 내용이 나오도록 하는 방법*/
+		position: relative;
+		/*검색창이 head의 포지션으로 인해 화면 밖으로 나간다. 이를 기준하는 포지션을 container로 변경하여 기준 위치를 바꿔준다.*/
+		padding: 0 10px;
+		/*데스크탑 화면에서 좌우가 화면에 딱 붙는 모습인 걸 보안하는 방법*/
+	}
+	.search{
+		top: 0;
+		right: 10;
+
+	}
 }
