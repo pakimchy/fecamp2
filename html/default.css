@@ -365,6 +365,11 @@ main{
 .gnb ul ul{
 	position: absolute;
 }
+.gnb ul li:nth-child(3)>ul{
+	/*자식의 순서대로 순차적으로 선택할 수 있는 선택자*/
+	left: 100px;
+	/*3번째 선택자만 100px만큼 이동한다.*/
+}
 .gnb li li{
 	border: 0;
 	display: inline-block;
