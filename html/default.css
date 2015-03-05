@@ -403,6 +403,9 @@ main{
 		float: left;
 		width: 100%;
 		/*main의 부모인 body에 우측에 padding을 넣어 main이 한쪽이 차지하지 않게 한다.*/
+		/*main 영역에 오른쪽 안쪽면으로 공간을 만들어 준다.*/
+		margin-right: -180px;
+		/*그 방법은 margin을 음수값으로 주어 nav와 aside가 들어갈 공간을 만들어준다.*/
 	}
 	/*메인 화면 좌측 정렬*/
 	.lnb, 
@@ -413,6 +416,9 @@ main{
 		/*box-sizing을 하지 않으면 content box로 나온다. 이런 경우 padding과 margin이 width에 포함되지 않아, aside가 202px크기로 나온다.*/
 		box-sizing: border-box;
 		/*이렇게 속성을 border-box로 넣어줘서 padding과 margin을 width에 포함시킨다.*/
+		position: relative;
+		left: 200px;
+		/*왼쪽으로 nav와 aside를 움직이게 하는 방법*/
 	}
 	/*메뉴들 우측 정렬*/
 	.lnb{
