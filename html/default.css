@@ -62,6 +62,14 @@ video,
 	width: 14%;
 	/*테이블의 폭이 고정형태로 나타난다.*/
 }
+.sign-up dt{
+	font-weight: bold;
+	font-size: 16px;
+}
+.sign-up input+label{
+	/*인접형제 선택자: input다음에 label이 만들어져 있을 것을 선택한다.*/
+	margin-right: 20px;
+}
 /*All*/
 @font-face {
   font-family: NG;
