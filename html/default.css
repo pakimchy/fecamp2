@@ -48,6 +48,16 @@ video,
 .table th,
 .table td{
 	border-bottom: 1px solid #ddd;
+	padding-top: 5px;
+}
+.table thead th{
+	background: #eee;
+	border-top: 2px solid #bbb;
+}
+.table td{
+	vertical-align: top;
+	/*수직 정렬이 기본값이 중앙정렬인 것을 상단 정렬로 */
+	/*td 안에 들어간 텍스트를 정렬한다.*/
 }
 /*All*/
 body{
