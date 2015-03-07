@@ -22,6 +22,7 @@ body, table, button, input, textarea, select{
 img{
 	max-width: 100%;
 	/*부모의 크기보다 큰 이미지의 경우에만 폭을 가변폭으로 하는 방법*/
+	height: auto;
 }
 /*All*/
 body{
