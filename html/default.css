@@ -38,6 +38,15 @@ video,
 	width: 100%;
 	height: 100%;
 }
+.table-rwd{
+	overflow: auto;
+}
+.table{
+	border: 1px solid #ccc;
+}
+.table td{
+	border: 1px solid #ddd;
+}
 /*All*/
 body{
 		background-image: -webkit-linear-gradient(#ccc,#fff);/*-webkit- 밴더 프리픽스을 적용한 브라우저일 경우 읽어라.*/

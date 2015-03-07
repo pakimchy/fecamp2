@@ -78,10 +78,12 @@
 				<div class="body">
 					<main id="main">
 						<article>
+				<!-- 이미지 삽입 -->
 							<img hidden src="http://dummyimage.com/1024x100/000/fff" width="1024" height="100" alt>
 							<!-- 이미지 태그에 width와 height값을 넣는 것을 권장한다. -->
 							<!-- 이렇게하면 높이값은 변화가 없어서, 양옆으로 찌그러든 모양으로 나온다. -->
 							<!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
+				<!-- 동영상 삽입1 -->
 							<video hidden controls="controls" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360">
 							<!-- video는 항상 src를 가져야 하나, 자신이 가지고 있지 않은 경우, 자식 요소 내에 src를 찾는다. -->
 							<!-- control : 동영상 플레이 영상 보이기 뭐 이런 조작을 하는 걸 보여주게 하는 것 -->
@@ -101,14 +103,62 @@
 									<!-- 폴빽 - 어떤 것도 동영상을 보여주지 못하는 경우에는 이 이미지가 띄워진다. -->
 								</object>
 							</video>
+				<!-- 동영상 다운로드 링크 삽입 -->
 							<p hidden>
 								<strong>Download video:</strong> <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4 format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">Ogg format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm">WebM format</a>
 								<!-- 동영상을 못보는 경우 다운로드 할 수 있는 공간을 지원한다. -->
 							</p>
-							<div class="vframe">
+				<!-- 동영상 삽입2 -->
+							<div hidden class="vframe">
 								<iframe width="560" height="315" src="https://www.youtube.com/embed/JAUoeqvedMo" frameborder="0" allowfullscreen></iframe>
 								<!-- img나 video 같은 겨우 inline이어서 자기 자신의 너비높이의 비율정보가 있지만, iframe은 비율정보를 가지고 있지 않아서 높이값이 이상하게 나온다. 그래서 vframe을 css에서 img와 video와 함께 넣어줄 수 없다. -->
 							</div>
+				<!-- 테이블 삽입 -->
+							<div class="table-rwd">
+							<!-- 가로 폭을 만들 css를 넣어줄 class -->
+						      <table class="table">
+						        <thead>
+						          <tr>
+						            <th>#</th>
+						            <th>Table heading</th>
+						            <th>Table heading</th>
+						            <th>Table heading</th>
+						            <th>Table heading</th>
+						            <th>Table heading</th>
+						            <th>Table heading</th>
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						            <th scope="row">1</th>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						          </tr>
+						          <tr>
+						            <th scope="row">2</th>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						          </tr>
+						          <tr>
+						            <th scope="row">3</th>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						            <td>Table cell</td>
+						          </tr>
+						        </tbody>
+						      </table>
+					 	   </div>
 						</article>
 					</main>
 					<!--웹페이지의 본문 영역, 한번만 사용할 수 있고, 유일한 곳-->
