@@ -91,6 +91,9 @@ body{
 	text-shadow: 1px 5px 2px #fff, -1px -1px 0 #bbb;
 	/*그림자의 우측 아래 뽀샤시 색상*/
 }
+.gnb *{
+	box-sizing:content-box;
+}
 .search{
 	letter-spacing: -4px; 
 }
@@ -210,6 +213,7 @@ main>article{
 	/*width값을 설정하게 되면, 화면크기가 변경될때 padding과 border값이 다르게 보인다.*/
 	background: #fff;
 	/*잘안보이니 바탕색 넣기*/
+	box-sizing: content-box;
 }
 .aside h2{
 	font-size: 14px;
@@ -239,8 +243,8 @@ main>article{
 }
 
 /*Mobile*/
-	/*좌우에 마진을 넣어준다. body or container에 넣어준다.*/
-.container{
+	/*좌우에 마진을 넣어준다. body or ctnr에 넣어준다.*/
+.ctnr{
 	margin: 0 10px;
 }
 .skip{
@@ -255,6 +259,8 @@ main>article{
 	/*넘어간 값은 숨기라는 의미.*/
 	margin: 0;
 	/*없어도 됨*/
+	opacity: 0;
+	/*화면에선 안보이지만, 화면 낭독기는 읽을 수 있음.*/
 }
 .gnb>ul{
 	background: #666;
@@ -264,7 +270,7 @@ main>article{
 	display: none;
 }
 .gnb>button{
-	border: 0;
+	border: 0; 	
 	background: #666;
 	/*background: #666 url(xxx.png) no-repeat;*/
 	/*이미지가 색상 위에 무조건 올라온다. no-repeat은 바둑판식 표현을 못하도록*/
@@ -280,6 +286,7 @@ main>article{
 	/*마우스 올릴때 손모양으로 바뀜*/
 	top: 15px;
 	right: 10px;
+	box-sizing: border-box;
 }
 .gnb>button:before{
 	/*bfore는 button의 첫번째 자식요소를 선택하라!*/
@@ -295,6 +302,7 @@ main>article{
 	border-bottom: 12px double #fff;
 	/*absolute는 부모의 position이 있어야, 부모의 값을 가진다.*/
 	/*전체 넓ㅅ이 widht32 /  border-top 12르 double로 3등분 해서 4,4,4가 됨, height값이 4여서 top과 bottom의 사이 폭이 나온다.*/
+	box-sizing: content-box;
 }
 .gnb ul{
 	margin: 0;
@@ -519,12 +527,12 @@ body, table, input, textarea, button{
 		position: relative;
 		left: 200px;
 	}
-	.container{
+	.ctnr{
 		max-width: 1280px;
 		margin: 0 auto;
 		/*화면에의 중앙에 내용이 나오도록 하는 방법*/
 		position: relative;
-		/*검색창이 head의 포지션으로 인해 화면 밖으로 나간다. 이를 기준하는 포지션을 container로 변경하여 기준 위치를 바꿔준다.*/
+		/*검색창이 head의 포지션으로 인해 화면 밖으로 나간다. 이를 기준하는 포지션을 ctnr로 변경하여 기준 위치를 바꿔준다.*/
 		padding: 0 10px;
 		/*데스크탑 화면에서 좌우가 화면에 딱 붙는 모습인 걸 보안하는 방법*/
 	}
