@@ -81,6 +81,30 @@
 							<img src="http://dummyimage.com/1024x100/000/fff" width="1024" height="100" alt>
 							<!-- 이미지 태그에 width와 height값을 넣는 것을 권장한다. -->
 							<!-- 이렇게하면 높이값은 변화가 없어서, 양옆으로 찌그러든 모양으로 나온다. -->
+							<!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
+							<video controls="controls" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360">
+							<!-- video는 항상 src를 가져야 하나, 자신이 가지고 있지 않은 경우, 자식 요소 내에 src를 찾는다. -->
+							<!-- control : 동영상 플레이 영상 보이기 뭐 이런 조작을 하는 걸 보여주게 하는 것 -->
+							<!-- poster : 동영상이 실행되기 이전에 화면에 보여줄 이미지를 넣어주는 곳 -->
+								<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" />
+								<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm" />
+								<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" />
+								<!-- IE7,8,9는 위 source를 읽지 못한다. 그래서 아래 objec태그를 읽어서 보여준다. -->
+								<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+									<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+								<!-- 브라우저의 종류에 따라 object태그를 읽어들이기도 하고, param태그의 주소를 읽어들이기도 하기에 두번 써진다. -->
+									<param name="allowFullScreen" value="true" />
+									<param name="wmode" value="transparent" />
+									<param name="flashVars" value="config={'playlist':['http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg',{'url':'http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4','autoPlay':false}]}" />
+									<!-- 소스에 mp4파일을 플레쉬로 바꿔서 보여준다. -->
+									<img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below" />
+									<!-- 폴빽 - 어떤 것도 동영상을 보여주지 못하는 경우에는 이 이미지가 띄워진다. -->
+								</object>
+							</video>
+							<p>
+								<strong>Download video:</strong> <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4 format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">Ogg format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm">WebM format</a>
+								<!-- 동영상을 못보는 경우 다운로드 할 수 있는 공간을 지원한다. -->
+							</p>
 						</article>
 					</main>
 					<!--웹페이지의 본문 영역, 한번만 사용할 수 있고, 유일한 곳-->
