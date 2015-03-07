@@ -171,13 +171,19 @@
  	   							<!-- 필수항목 넣는 곳 -->
  	   							<fieldset>
  	   								<legend>회원 가입(필수)</legend>
- 	   								<lebel for="email">이메일</lebel>
- 	   								<input type="email" id="email" required>
- 	   								<lebel for="pw1">비밀번호</lebel>
- 	   								<input type="password" id="pw1" required>
- 	   								<lebel for="pw2">비밀번호 확인</lebel>
- 	   								<input type="password" id="pw2" required>
- 	   								<!-- input에 id를 넣고, lebel에 for를 넣어 맵핑시켜 준다. 즉, tab으로 email에 들어간 경우 lebel의 내용을 읽어준다. -->
+ 	   								<div class="form-group">
+	 	   								<lebel for="email">이메일</lebel>
+	 	   								<input type="email" id="email" class="form-control" required placeholder="abc@abc.com">  									
+ 	   								</div>
+ 	   								<div class="form-group">
+	 	   								<lebel for="pw1">비밀번호</lebel>
+	 	   								<input type="password" id="pw1" class="form-control" required placeholder="영문 5자리 작성">
+ 	   								</div>
+ 	   								<div class="form-group">
+	 	   								<lebel for="pw2">비밀번호 확인</lebel>
+	 	   								<input type="password" id="pw2" class="form-control" required placeholder="영문 5자리 작성">
+ 	   								</div>
+	 	   								<!-- input에 id를 넣고, lebel에 for를 넣어 맵핑시켜 준다. 즉, tab으로 email에 들어간 경우 lebel의 내용을 읽어준다. -->
  	   							</fieldset>
  	   							<fieldset>
  	   								<legend>추가 입력 사항(옵션)</legend>
