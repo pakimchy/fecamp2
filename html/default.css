@@ -89,7 +89,10 @@ main{
 	/*모서리 둥글게 깎기*/
 	min-height: 300px;
 	/*박스내 300px보다 커지면, 함께 커진다. height는 내용이 넘쳐난다.*/
-
+}
+main>article{
+	padding: 15px;
+	/*article은 html에 여러번 사용이 가능함으로 main에 들어간 article에만 해당하게 하기 위해 main>를 넣어준다.*/
 }
 .lnb ul,
 .aside ul{
