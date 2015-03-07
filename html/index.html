@@ -105,6 +105,10 @@
 								<strong>Download video:</strong> <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4">MP4 format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv">Ogg format</a> | <a href="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm">WebM format</a>
 								<!-- 동영상을 못보는 경우 다운로드 할 수 있는 공간을 지원한다. -->
 							</p>
+							<div class="vframe">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/JAUoeqvedMo" frameborder="0" allowfullscreen></iframe>
+								<!-- img나 video 같은 겨우 inline이어서 자기 자신의 너비높이의 비율정보가 있지만, iframe은 비율정보를 가지고 있지 않아서 높이값이 이상하게 나온다. 그래서 vframe을 css에서 img와 video와 함께 넣어줄 수 없다. -->
+							</div>
 						</article>
 					</main>
 					<!--웹페이지의 본문 영역, 한번만 사용할 수 있고, 유일한 곳-->
