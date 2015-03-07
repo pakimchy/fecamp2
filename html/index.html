@@ -163,6 +163,36 @@
 			 	   <!-- http://www.google.com/fonts/earlyaccess :여기서 찾아올꺼임 -->
 			 	   			<h1 hidden>나눔 고딕 테스트</h1>
 			 	   			<p hidden>동해물과 백두산이 마르고 닳도록 </p>
+
+ 	   				<!-- 회원 가입 -->
+ 	   						<form action>
+ 	   							<!-- 필수항목 넣는 곳 -->
+ 	   							<fieldset>
+ 	   								<legend>회원 가입(필수)</legend>
+ 	   								<lebel for="email">이메일</lebel>
+ 	   								<input type="email" id="email" required>
+ 	   								<lebel for="pw1">비밀번호</lebel>
+ 	   								<input type="password" id="pw1" required>
+ 	   								<lebel for="pw2">비밀번호 확인</lebel>
+ 	   								<input type="password" id="pw2" required>
+ 	   								<!-- input에 id를 넣고, lebel에 for를 넣어 맵핑시켜 준다. 즉, tab으로 email에 들어간 경우 lebel의 내용을 읽어준다. -->
+ 	   							</fieldset>
+ 	   							<fieldset>
+ 	   								<legend>추가 입력 사항(옵션)</legend>
+ 	   								<dl>
+ 	   									<dt>성별</dt>
+ 	   									<dd>
+ 	   										<input type="radio" id="male" name="gender">
+ 	   										<label for="male">남성</label>
+ 	   										<input type="radio" id="female" name="gender">
+ 	   										<label for="female">여성</label>
+ 	   										<!-- radio에 name을 같은 이름으로 넣어주면 택1만 가능하도록 한다. -->
+ 	   									</dd>
+ 	   								</dl>
+
+ 	   							</fieldset>
+ 	   							<button type="submit">확인</button>
+ 	   						</form>
 						</article>
 					</main>
 					<!--웹페이지의 본문 영역, 한번만 사용할 수 있고, 유일한 곳-->
