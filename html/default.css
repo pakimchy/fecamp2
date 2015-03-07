@@ -18,7 +18,9 @@ body{
 body, table, button, input, textarea, select{
 	font-size: 14px;
 	/*하위의 선택자들은 body에 글꼴크기를 지정해도 기준 크기로 나온다. 그래서 모두 지정을 해줘야한다.*/
-	font-family: NG;
+	font-family: NG, sans-serif;
+	/*sans-serif: 장식 없는 글꼴 */
+	/*컴퓨터에 있는 글꼴 중 하나를 사용하게끔 만들어 주는 롤빽 역할*/
 }
 img,
 video,
