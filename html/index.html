@@ -172,18 +172,18 @@
  	   							<fieldset>
  	   								<legend>회원 가입(필수)</legend>
  	   								<div class="form-group">
-	 	   								<lebel for="email">이메일</lebel>
+	 	   								<label for="email">이메일</label>
 	 	   								<input type="email" id="email" class="form-control" required placeholder="abc@abc.com">  									
  	   								</div>
  	   								<div class="form-group">
-	 	   								<lebel for="pw1">비밀번호</lebel>
+	 	   								<label for="pw1">비밀번호</label>
 	 	   								<input type="password" id="pw1" class="form-control" required placeholder="영문 5자리 작성">
  	   								</div>
  	   								<div class="form-group">
-	 	   								<lebel for="pw2">비밀번호 확인</lebel>
+	 	   								<label for="pw2">비밀번호 확인</label>
 	 	   								<input type="password" id="pw2" class="form-control" required placeholder="영문 5자리 작성">
  	   								</div>
-	 	   								<!-- input에 id를 넣고, lebel에 for를 넣어 맵핑시켜 준다. 즉, tab으로 email에 들어간 경우 lebel의 내용을 읽어준다. -->
+	 	   								<!-- input에 id를 넣고, label에 for를 넣어 맵핑시켜 준다. 즉, tab으로 email에 들어간 경우 label의 내용을 읽어준다. -->
  	   							</fieldset>
 
  	   							<fieldset>
@@ -211,6 +211,29 @@
  	   							</fieldset>
  	   							<button type="submit">확인</button>
  	   						</form>
+ 	   						<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+							  Launch demo modal
+							</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+							      </div>
+							      <div class="modal-body">
+							        ...
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							        <button type="button" class="btn btn-primary">Save changes</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
 						</article>
 					</main>
 					<!--웹페이지의 본문 영역, 한번만 사용할 수 있고, 유일한 곳-->
