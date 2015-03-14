@@ -113,6 +113,196 @@ function hello(name){
 hello('김태곤');
 hello('신승엽');
 
+function 더하기(num1, num2){
+	return(num1 + num2);
+	//함수 안에서 만들어진 값은 함수 밖으로 나올 때 사라진다. 이를 괄호 밖에도 적용할 수 있도록 하려면, return으로 묶어주면 괄호 밖에서도 사용이 가능하게 바뀐다.
+	//반환한다라고 표현한다.
+}
+
+var num = 더하기(3,5);
+console.log(num);
+
+//문제. 전달한 숫자를 제곱한 값을 반환하는 함수 제곱()을 작성하라.
+
+function 제곱(num1){
+	return(num1 * num1);
+}
+var num = 제곱(2);
+console.log(num);
+
+var 제곱1 = 제곱;
+제곱1(5);
+console.log(제곱1);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+var lunch = {
+	all : '라면집',
+	학생1 : '떡라면',
+	학생2 : '치즈라면',
+	학생3 : '치즈라면',
+	학생4 : '국수',
+	학생5 : '오므라이스',
+	학생6 : '라면'
+};
+// function 점심(이름,메뉴){
+// 	console.log(이름+'님은 오늘 점심으로 '+메뉴+'를 먹었습니다.')
+// }
+
+// 점심('이현철','라면');
+/////////////////////////////////////////////////////////////////////////////////////////
+
+//함수 만드는 2 - 표현식
+//
+var fn = function (n){
+	return n*n;
+}
+//아래처럼 함수를 만든 걸 변수로 취급해서 사용이 가능하다.
+fn(5);
+var num = (function(n){
+	return n * n;
+})(5);
+
+/////////////////////////////////////////////////////////////////////////////////////////
+var sum;
+function add1(a, b) {
+	sum = a + b;
+}
+
+function add2(a, b) {
+	return a + b;
+}
+
+
+add1(1, 2);
+sum + 3;
+
+add2(1, 2) + 3;
+
+add2(add2(1, 2), 3);
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+// 변수의 스코프(scope) = 유효범위
+var 변수 = 1;
+function 함수(){
+	// var 변수 = 1;
+	변수 = 변수 + 1;
+	console.log(변수);
+}
+함수();
+//console.log(변수);	<--지정되지도 않는 변수를 사용한다고 애러메세지가 나옴
+함수();
+함수();
+함수();
+함수();
+함수();
+
+//호이스팅(hoisting)
+function 함수1(){
+	안쪽함수();
+
+	var 변수1 = 1;
+	변수1 = 변수1 +1;
+	console.log(변수1);
+
+	function 안쪽함수(){
+		console.log('안쪽1');
+	}
+}
+함수1();
+//처음 실행하면 변수와 함수를 먼저 찾는다. 이름만! 값은 저장하진 않는다. 그리고 나서 작동을 함으로 안쪽함수()가 위에 있어도, 아래있는 안쪽함수 함수를 읽어 들인다.
+
+
+//메소드는 함수를 값으로 가진 프로퍼티
+var car = {
+	color : 'silver',
+	start : function(){
+		console.log('부릉');
+	}
+};
+car.start();
+
+// 문자열의 프로퍼티와 메소드
+var str = '동해물과 백두산이 마르고 닳도록 백두산아';
+//글자수?
+var strlen = str.length;
+console.log(strlen); // 17 문자의 길이를 구해줌
+
+//특정 문자열을 포함하고 있나?
+var idx = str.indexOf('마르고');
+console.log(idx); //10, 글자 시작지점
+console.log(str.indexOf('없다')); //-1, 글자가 없는 경우 -1로 나온다.
+
+var newstr = str.substr(0, 7);
+console.log(newstr); //문자열 자르기.(시작위치, 문자 수)
+
+//문제. str에서 "백두산이"만 잘라내는 코드를 작성하라.
+var 백두산이 = str.substr(5,4);
+console.log(백두산이);
+
+var lastIndex = str.lastIndexOf('백두산');
+console.log(lastIndex); //18, 뒤에서 부터 찾고, 위치는 앞에서부터 몇번째인지를 확인한다.
+
+
+//문자열 자르기 -substring(시작위치, 끝위치)
+var 백두산 = str.substring(5,8);
+console.log(백두산);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//숫자의 메소드
+var num = 1234.5;
+//소수점 아래 자리수를 맞추는 방법
+num.toFixed(3);
+console.log(num.toFixed(3));
+console.log(typeof num.toFixed(3)); //문자열로 변환된다.
+
+
+//배열의 메소드
+var fruits = ['Apple', 'Banana', 'Cherry'];
+
+fruits.length; //3. 배열의 원소 개수
+console.log(fruits.length);
+
+//배열에 원소를 추가하는 방법1
+fruits[fruits.length] = 'Mango'; //배열의 원소를 한개씩 추가하며 넣을때.
+
+//배열에 원소를 추가하는 방법2
+fruits.push('Mango','rrr', 'eee', 'fff'); //이렇게 넣어줘도 맨뒤에 추가로 들어간다.
+
+console.log(fruits.join(" + ")); //각 원소들을 괄호안의 값을 사이에 넣어서 연결해준다.
+console.log(fruits.join()); //각 원소들을 괄호안의 값을 사이에 넣어서 연결해준다.
+
+//문제. 배열에 포함된 원소 갯수를 알아내서 반환하는 함수 
+var 배열의크기 = arraySize(['a', 'b', 'c']);
+
+function arraySize(배열){
+	return 배열.length;	
+}
+
+console.log(배열의크기);
+
+//문제. 배열 첫 번째 원소의 값을 반환하는 asrrayFirst()함수를 작성하라.
+var 첫번째원소 = arrayFirst(['a','b','c']); //'a'
+
+function arrayFirst(배열){
+	return 배열[0];
+}
+console.log(첫번째원소);
+
+//문제. 배열 마지막 원소의 값을 반환하는 arrayLast()함수를 작성하라.
+var 마지막원소 = arrayLast(['a','b','c']);
+var 마지막원소 = arrayLast(['a','b']);
+var 마지막원소 = arrayLast(['a']);
+
+function arrayLast(배열){
+	var num = 배열.length-1;
+	return 	배열[num];
+}
+console.log(마지막원소);
+
 
 
 
