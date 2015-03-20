@@ -174,11 +174,11 @@ function add2(a, b) {
 
 
 add1(1, 2);
-sum + 3;
+console.log(sum + 3);
 
 add2(1, 2) + 3;
 
-add2(add2(1, 2), 3);
+console.log(add2(add2(1, 2), 3));
 /////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -277,9 +277,9 @@ console.log(fruits.join()); //각 원소들을 괄호안의 값을 사이에 넣
 
 //문제. 배열에 포함된 원소 갯수를 알아내서 반환하는 함수 
 var 배열의크기 = arraySize(['a', 'b', 'c']);
-
+var num;
 function arraySize(배열){
-	return 배열.length;	
+	num= 배열.length;	
 }
 
 console.log(배열의크기);
