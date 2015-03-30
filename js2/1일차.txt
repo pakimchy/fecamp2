@@ -1,0 +1,30 @@
+정찬명
+
+
+
+조교: 신승엽
+flysky@flysky.kr
+010-2927-1892
+
+
+
+크롬
+sublimetext3
+github
+1) 가입
+2) 도메인 생성
+3) 다운로드
+
+
+
+1. 강의
+>> html tag
+<h1> --> html element
+<h1                lang        =   'ko' 
+element(요소) 에트리뷰트(속성)     값
+
+속성과 값은 띄워쓰기로 추가가 가능
+<h1 lang='ko' title='...'>
+
+>> html 정의
+ <html> </html>

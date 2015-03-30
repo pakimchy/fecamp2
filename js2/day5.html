@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>5일차</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/prism.css">
+	<script src="js/day5.js"></script>
+</head>
+<body>
+	<h1>오늘 배울 내용</h1>
+
+	<h2>연산자</h2>
+	<h3>산술 연산자</h3>
+	<p>수식 계산을 위해 필요한 연산자</p>
+<!--
+    "1" : 문자열
+    -"1" : 숫자로 인정해준다.
+    -"g" : NaN이 뜬다.
+    +"1" : 1(숫자)로 인식한다.
+    var numStr = '123'; -> undefined
+    +numStr -> 123을 출력한다.
+-->
+
+	<h3>비교 연산자</h3>
+	<p>두 값을 비교하는 연산자</p>
+<!--
+    <=, >= 이렇게 부등호를 먼저 쓰고, 등호를 나중에 쓴다.
+    같지 않다는 !=
+    11 == '11'  : true로 나온다. 
+    true == 1 //true
+    false == 0 //true
+    null == undefined //true
+    등호 3개(===)는 타입(형)도 같아야지만이 true가 뜬다.
+    true === 1 //false
+-->
+	<h3>할당 연산자</h3>
+	<p>변수에 값을 할당하기 위해 사용하는 연산자</p>
+<!--
+    var num = 6; //6이 num에 들어간다.
+    var num=nnn=7; //num에는 7이 들어간다.
+    (num=5) // num값은 5이다.
+    num = num+5; //num은 10이 된다.
+    이것은 아래와 같이 쓸 수 있다.
+    num +=5; // +5를 한(+)다음에 할당(=)해라란 의미
+    -=, +=, *=, /=, %= 도 존재한다.
+    문자열도 사용 가능하다.
+    num += 'html';  // '15html'이 된다.
+-->
+    
+	<h3>논리 연산자</h3>
+	<p>표현식의 논리적인 결합을 위해 필요한 연산자</p>
+<!--
+    and , or
+    and는 양쪽의 두개 값에 모두 true여야 실행
+    true && true //true
+    (3>5) && (5>9) //false
+    (3>5) && (5<9) //false
+    or 연산자는 둘 중에 하나이상 true면 true이다.
+    (3>5) || (5>9) //false
+    (3>5) || (5<9) //true
+    (3>5) || (5<9) && (3==5) //true ,false 임으로 false
+    (3>5) || (5<9) && (5==5) //true , true 임으로 true
+-->
+	<h3>비트 연산자</h3>
+	<p>비트(bit) 계산을 위해 필요한 연산자</p>
+<!--
+    2진수 100 = 2^2*1 + 2^1*0 +2^0*0 = 10진수 4
+    4 & 5 // 4가 나온다. (4와 5를 2진수로 바꿔 각 자리수 끼리의 &&인지를 확인해 결과를 낸다.) 
+-->
+	<h2>조건문</h2>
+	<p>주어진 조건을 만족하거나 만족하지 않을 때 실행할 코드를 달리하기 위해 사용하는 문법</p>
+<!--    
+    if(num>3)
+        console.log("여기서 끝"); 
+    // 중괄호가 없을 경우, 한줄만을 실행시키고 나머지는 if구문 밖에 있는 것으로 인지한다.
+-->
+	<h3>if, else</h3>
+	<p><code>if</code>문 안에 있는 내용의 참(true) 또는 거짓(false)을 판별하여 참이면 <code>if</code>문 블럭을 실행하고 거짓이면 <code>else</code>문 블럭의 코드를 실행한다. <code>if</code>와 <code>else</code> 사이에는 또 다른 조건 블럭을 추가할 수 있는 <code>else if</code>문을 0개 이상 사용할 수 있다. <code>else</code>와 <code>else if</code>는 생략할 수 있다.</p>
+	<pre><code class="language-javascript">// 변수 num의 값이 3보다 크면 코드를 실행한다.
+if (num > 3) {
+	console.log('num은 3보다 큽니다');
+}</code></pre>
+	<h3>참스러운 값(truthy value)과 거짓스러운 값(falsy value)</h3>
+	<p>조건문에 사용되는 모든 조건이 반드시 <code>true</code>와 <code>false</code>로 구별되지는 않는다. 일부값은 <code>false</code>가 아님에도 조건문에서 마치 <code>false</code>처럼 취급된다.</p>
+	<h4><code>false</code>처럼 취급되는 값</h4>
+	<p><ul>
+		<li>숫자 0</li>
+		<li>빈 문자열</li>
+		<li>undefined</li>
+		<li>null</li>
+		<li>NaN</li>
+<!--    
+    if(0){
+        console.log("여기오면 true");
+    }//0은 false로 인식함으로 출력하지 않는다.
+    if(-5){
+        console.log("여기오면 true");
+    }//위 <li>에 있지 않은 항목인 -5는 true로 인식해 출력한다.
+
+    if(num=10){
+        console.log('num은 0이 아니다.');
+    }//이는 true로 인식함으로, 출력한다.
+-->
+	</ul></p>
+	<p>그 밖의 값은 모두 <code>true</code>처럼 취급된다.</p>
+<!--    
+    1 && 1 // 1은 trusy value로 true 값을 반환한다.
+    0 && 0 // 0은 falsy value로 false 값을 반환한다.
+
+    0 || 1 // 가장 처음 trusy로 판명된 연산자를 변환한다. 그래서 1이 나온다.
+
+    var nums = [1,2,3,4,5];
+    (num[0]=6) || (num[1]=5) || (num[2]=4) // 맨 처음 true를 반환한 값에서 멈춘다.
+    // 그래서 그 이후는 더이상 하지 않아서....
+    [6,2,3,4,5] 로 배열의 값이 바뀐다.
+    (num[0]=0) && (num[1]=5) && (num[2]=4) // 맨 처음 false를 반환한 값에서 멈춘다.
+    // 그래서 [0,2,3,4,5]로 배열이 바뀐다.
+
+    function 곱하기(a, b){
+        b = b || 2;
+        return a * b;
+    }
+    곱하기(3); // 이렇게 한 경우 b || 2 에서 b에 인수를 넣지 않았음으로 undefined로 falsy를 반환한다. 그리고 2로 넘어갔을 때, trusy로 2를 반환한다. 그래서 return 3 * 2 ;를 반환한다.
+
+    function 곱하기(a, b){
+        b = b || 0;
+        return a * b;
+    }
+    이렇게 들어간 경우 b인수를 지정하지 않으면 b || 0 에서 b는 falsy라 0으로 넘어간다. 0 역시 falsy지만 마지막 값인 경우 마지막 값을 반환해 0을 반한환다.
+
+    function 곱하기(a, b){
+        if(typeof b === 'undefined'){
+            b=2;
+        }
+    } //이렇게 쓰는 것이 의도적으로 b에 0을 넣었을 때 2로 바뀌는 상황을 방지할 수 있다.
+
+-->
+    
+	<h3>switch</h3>
+	<p>비교할 표현식이 특정한 값과 같은지 여러 차례 비교해야 할 때 주로 사용.</p>
+	<pre><code class="language-javascript">/* 좋은 코드는 아니지만, 예제로 봐주세요. */
+function 요일(y, m, d) {
+	var date = new Date(y, m-1, d), name = '';
+	switch(date.getDay()) {
+	case 0:
+		name = '일';
+		break;
+	case 1:
+		name = '월';
+		break;
+	case 2:
+		name = '화';
+		break;
+	case 3:
+		name = '수';
+		break;
+	case 4:
+		name = '목';
+		break;
+	case 5:
+		name = '금';
+		break;
+	case 6:
+		name = '토';
+		break;
+	}
+	return name;
+}</code></pre>
+
+<script src="js/prism.js"></script>
+</body>
+</html>
